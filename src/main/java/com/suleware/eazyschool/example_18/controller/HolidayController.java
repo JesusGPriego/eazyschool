@@ -27,7 +27,7 @@ public class HolidayController {
         Holiday.Type[] types = Holiday.Type.values();
         for (Holiday.Type type : types) {
             model.addAttribute(type.toString(),
-                    (holidays.stream().filter(holiday -> holiday.getType().equals(type)).collect(Collectors.toList())));
+                    (holidays.stream().filter(holiday -> holiday.type().equals(type)).collect(Collectors.toList())));
         }
         return "holidays.html";
     }
