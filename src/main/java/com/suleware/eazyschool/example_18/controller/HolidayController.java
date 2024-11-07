@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.suleware.eazyschool.example_18.model.Holiday;
@@ -38,6 +39,24 @@ public class HolidayController {
                     (holidays.stream().filter(holiday -> holiday.type().equals(type)).collect(Collectors.toList())));
         }
         return "holidays.html";
+    }
+
+    @GetMapping("/holidays/{display}")
+    public String displayHolidaysViaPath(@PathVariable String display, Model model) {
+
+        Optional<Boolean> festival = Optional.empty();
+        Optional<Boolean> federal = Optional.empty();
+
+        if (null != display && display.equals("all")) {
+            festival = Optional.of(true);
+            federal = Optional.of(true);
+        } else if (null != display && display.equals("federal")) {
+            federal = Optional.of(true);
+        } else if (null != display && display.equals("festival")) {
+            festival = Optional.of(true);
+        }
+
+        return displayHolidays(festival, federal, model);
     }
 
 }
