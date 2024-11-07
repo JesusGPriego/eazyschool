@@ -2,11 +2,13 @@ package com.suleware.eazyschool.example_18.controller;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.suleware.eazyschool.example_18.model.Holiday;
 
@@ -14,7 +16,13 @@ import com.suleware.eazyschool.example_18.model.Holiday;
 public class HolidayController {
 
     @GetMapping("/holidays")
-    public String displayHolidays(Model model) {
+    public String displayHolidays(
+            @RequestParam(required = false) Optional<Boolean> festival,
+            @RequestParam(required = false) Optional<Boolean> federal,
+            Model model) {
+
+        model.addAttribute("festival", festival.orElse(false));
+        model.addAttribute("federal", federal.orElse(false));
         List<Holiday> holidays = Arrays.asList(
                 new Holiday(" Jan 1 ", "New Year's Day", Holiday.Type.FESTIVAL),
                 new Holiday(" Oct 31 ", "Halloween", Holiday.Type.FESTIVAL),
