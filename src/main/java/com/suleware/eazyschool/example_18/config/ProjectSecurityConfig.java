@@ -15,7 +15,7 @@ public class ProjectSecurityConfig {
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .csrf(csrfConfigurer -> csrfConfigurer.disable())
+                .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(authRequests -> authRequests
                         .requestMatchers("/dashboard")
                         .authenticated()
