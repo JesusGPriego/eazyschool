@@ -16,8 +16,7 @@ import com.suleware.eazyschool.example_18.model.Holiday;
 @Controller
 public class HolidayController {
 
-    @GetMapping("/holidays")
-    public String displayHolidays(
+    private String displayHolidays(
             @RequestParam(required = false) Optional<Boolean> festival,
             @RequestParam(required = false) Optional<Boolean> federal,
             Model model) {
