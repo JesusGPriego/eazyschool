@@ -12,49 +12,56 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 public class ProjectSecurityConfig {
 
-    @Bean
-    SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http
-                .csrf(csrf -> csrf.disable())
-                .authorizeHttpRequests(authRequests -> authRequests
-                        .requestMatchers("/dashboard")
-                        .authenticated()
-                        .requestMatchers("/", "/home", "/holidays/**", "/contact", "/saveMsg", "/courses", "/about")
-                        .permitAll()
-                        .requestMatchers("assets/**")
-                        .permitAll()
-                        .requestMatchers("/login")
-                        .permitAll()
-                        .anyRequest().authenticated())
-                .formLogin(formLoginConfigurer -> formLoginConfigurer
-                        .loginPage("/login")
-                        .defaultSuccessUrl("/dashboard")
-                        .failureForwardUrl("/login?error=true")
-                        .permitAll())
-                .logout(logoutConfigurer -> logoutConfigurer
-                        .logoutUrl("/login?logout=true")
-                        .invalidateHttpSession(true)
-                        .permitAll())
-                .httpBasic(Customizer.withDefaults());
+  @Bean
+  SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
-        return http.build();
-    }
+    http.csrf(csrf -> csrf.ignoringRequestMatchers("/saveMsg"))
+        .authorizeHttpRequests(
+            authRequests -> authRequests.requestMatchers("/dashboard")
+                .authenticated()
+                .requestMatchers("/" ,
+                    "/home" ,
+                    "/holidays/**" ,
+                    "/contact" ,
+                    "/saveMsg" ,
+                    "/courses" ,
+                    "/about")
+                .permitAll()
+                .requestMatchers("assets/**")
+                .permitAll()
+                .requestMatchers("/login")
+                .permitAll()
+                .anyRequest()
+                .authenticated())
+        .formLogin(
+            formLoginConfigurer -> formLoginConfigurer.loginPage("/login")
+                .defaultSuccessUrl("/dashboard")
+                .failureUrl("/login?error=true")
+                .permitAll())
+        .logout(logoutConfigurer -> logoutConfigurer
+            .logoutSuccessUrl("/login?logout=true")
+            .invalidateHttpSession(true)
+            .permitAll())
+        .httpBasic(Customizer.withDefaults());
 
-    @Bean
-    InMemoryUserDetailsManager userDetailsService() {
+    return http.build();
+  }
 
-        UserDetails admin = User.withDefaultPasswordEncoder()
-                .username("admin")
-                .password("12345")
-                .roles("ADMIN", "ADMIN")
-                .build();
-        UserDetails user = User.withDefaultPasswordEncoder()
-                .username("user")
-                .password("12345")
-                .roles("USER")
-                .build();
+  @Bean
+  InMemoryUserDetailsManager userDetailsService() {
 
-        return new InMemoryUserDetailsManager(user, admin);
-    }
+    UserDetails admin = User.withDefaultPasswordEncoder()
+        .username("admin")
+        .password("12345")
+        .roles("ADMIN" , "ADMIN")
+        .build();
+    UserDetails user = User.withDefaultPasswordEncoder()
+        .username("user")
+        .password("12345")
+        .roles("USER")
+        .build();
+
+    return new InMemoryUserDetailsManager(user, admin);
+  }
 
 }

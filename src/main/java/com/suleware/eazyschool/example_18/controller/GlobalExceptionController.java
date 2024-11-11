@@ -7,11 +7,11 @@ import org.springframework.web.servlet.ModelAndView;
 @ControllerAdvice
 public class GlobalExceptionController {
 
-    @ExceptionHandler(Exception.class)
-    public ModelAndView handleException(Exception e) {
-        ModelAndView errorPage = new ModelAndView();
-        errorPage.setViewName("error.html");
-        errorPage.addObject("errorMsg", e.getMessage());
-        return errorPage;
-    }
+  @ExceptionHandler(Exception.class)
+  public ModelAndView handleException(Exception e) {
+    ModelAndView errorPage = new ModelAndView();
+    errorPage.setViewName("error.html");
+    errorPage.addObject("errorMsg" , e.getMessage());
+    return errorPage;
+  }
 }
