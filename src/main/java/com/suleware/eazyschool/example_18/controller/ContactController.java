@@ -26,7 +26,7 @@ public class ContactController {
 
   @GetMapping(value = "/contact")
   public String getContact(Model model) {
-    model.addAttribute("contact" , new Contact(null, null, null, null, null));
+    model.addAttribute("contact" , new Contact());
     return "contact.html";
   }
 

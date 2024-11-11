@@ -17,34 +17,47 @@ import com.suleware.eazyschool.example_18.model.Holiday;
 public class HolidayController {
 
   private String displayHolidays(
-      @RequestParam(required = false) Optional<Boolean> festival,
-      @RequestParam(required = false) Optional<Boolean> federal, Model model) {
+      @RequestParam(required = false)
+      Optional<Boolean> festival,
+      @RequestParam(required = false)
+      Optional<Boolean> federal,
+      Model model
+  ) {
 
-    model.addAttribute("festival" , festival.orElse(false));
-    model.addAttribute("federal" , federal.orElse(false));
+    model.addAttribute("festival", festival.orElse(false));
+    model.addAttribute("federal", federal.orElse(false));
     List<Holiday> holidays = Arrays.asList(
-        new Holiday(" Jan 1 ", "New Year's Day", Holiday.Type.FESTIVAL) ,
-        new Holiday(" Oct 31 ", "Halloween", Holiday.Type.FESTIVAL) ,
-        new Holiday(" Nov 24 ", "Thanksgiving Day", Holiday.Type.FESTIVAL) ,
-        new Holiday(" Dec 25 ", "Christmas", Holiday.Type.FESTIVAL) ,
-        new Holiday(" Jan 17 ", "Martin Luther King Jr. Day",
-            Holiday.Type.FEDERAL) ,
-        new Holiday(" July 4 ", "Independence Day", Holiday.Type.FEDERAL) ,
-        new Holiday(" Sep 5 ", "Labor Day", Holiday.Type.FEDERAL) ,
-        new Holiday(" Nov 11 ", "Veterans Day", Holiday.Type.FEDERAL));
+        new Holiday(" Jan 1 ", "New Year's Day", Holiday.Type.FESTIVAL),
+        new Holiday(" Oct 31 ", "Halloween", Holiday.Type.FESTIVAL),
+        new Holiday(" Nov 24 ", "Thanksgiving Day", Holiday.Type.FESTIVAL),
+        new Holiday(" Dec 25 ", "Christmas", Holiday.Type.FESTIVAL),
+        new Holiday(
+            " Jan 17 ",
+            "Martin Luther King Jr. Day",
+            Holiday.Type.FEDERAL
+        ),
+        new Holiday(" July 4 ", "Independence Day", Holiday.Type.FEDERAL),
+        new Holiday(" Sep 5 ", "Labor Day", Holiday.Type.FEDERAL),
+        new Holiday(" Nov 11 ", "Veterans Day", Holiday.Type.FEDERAL)
+    );
     Holiday.Type[] types = Holiday.Type.values();
     for (Holiday.Type type : types) {
-      model.addAttribute(type.toString() ,
+      model.addAttribute(
+          type.toString(),
           (holidays.stream()
-              .filter(holiday -> holiday.type().equals(type))
-              .collect(Collectors.toList())));
+              .filter(holiday -> holiday.getType().equals(type))
+              .collect(Collectors.toList()))
+      );
     }
     return "holidays.html";
   }
 
   @GetMapping("/holidays/{display}")
-  public String displayHolidaysViaPath(@PathVariable String display,
-      Model model) {
+  public String displayHolidaysViaPath(
+      @PathVariable
+      String display,
+      Model model
+  ) {
 
     Optional<Boolean> festival = Optional.empty();
     Optional<Boolean> federal = Optional.empty();
@@ -58,7 +71,7 @@ public class HolidayController {
       festival = Optional.of(true);
     }
 
-    return displayHolidays(festival , federal , model);
+    return displayHolidays(festival, federal, model);
   }
 
 }
