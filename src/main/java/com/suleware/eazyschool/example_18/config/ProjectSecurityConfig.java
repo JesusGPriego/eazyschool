@@ -19,17 +19,19 @@ public class ProjectSecurityConfig {
         .authorizeHttpRequests(
             authRequests -> authRequests.requestMatchers("/dashboard")
                 .authenticated()
-                .requestMatchers("/" ,
-                    "/home" ,
-                    "/holidays/**" ,
-                    "/contact" ,
-                    "/saveMsg" ,
-                    "/courses" ,
+                .requestMatchers("/",
+                    "/home",
+                    "/holidays/**",
+                    "/contact",
+                    "/saveMsg",
+                    "/courses",
                     "/about")
                 .permitAll()
                 .requestMatchers("assets/**")
                 .permitAll()
                 .requestMatchers("/login")
+                .permitAll()
+                .requestMatchers("/logout")
                 .permitAll()
                 .anyRequest()
                 .authenticated())
@@ -53,7 +55,7 @@ public class ProjectSecurityConfig {
     UserDetails admin = User.withDefaultPasswordEncoder()
         .username("admin")
         .password("12345")
-        .roles("ADMIN" , "ADMIN")
+        .roles("ADMIN", "ADMIN")
         .build();
     UserDetails user = User.withDefaultPasswordEncoder()
         .username("user")

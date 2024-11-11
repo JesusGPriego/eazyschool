@@ -48,7 +48,7 @@ Author URL: http://w3layouts.com
         </div>
         <div class="row login-block">
           <div class="col-md-6 login-center">
-            <form action="/login" method="post" class="signin-form">
+            <form th:action="@{/login}" method="post" class="signin-form">
               <div class="col-md-8 login-center input-grids">
                 <li
                   class="alert alert-danger"
@@ -69,6 +69,11 @@ Author URL: http://w3layouts.com
                   id="password"
                   placeholder="Password"
                   class="login-input"
+                />
+                <input
+                  type="hidden"
+                  name="${_csrf.parameterName}"
+                  th:value="${_csrf.token}"
                 />
               </div>
               <div class="col-md-8 login-center text-start">
