@@ -10,8 +10,6 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     show-sql: true
-    # database-platform: org.hibernate.dialect.MySQLD
     properties:
       hibernate:
         format-sql: true
-    # spring.jpa.database-platform=org.hibernate.dialect.MySQLD

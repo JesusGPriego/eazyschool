@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -72,10 +71,9 @@ public class ContactController {
   @GetMapping(value = "/closeMsg")
   public String closeMsg(
       @RequestParam
-      Long id,
-      Authentication authentication
+      Long id
   ) {
-    contactService.updateMsgStatus(id, authentication.getName());
+    contactService.updateMsgStatus(id);
     return "redirect:/displayMessages";
   }
 }

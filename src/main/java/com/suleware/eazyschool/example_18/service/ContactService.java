@@ -1,6 +1,5 @@
 package com.suleware.eazyschool.example_18.service;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -35,8 +34,6 @@ public class ContactService {
   ) {
     boolean isSaved = false;
     contact.setStatus(EazySchoolConstants.OPEN);
-    contact.setCreatedBy(EazySchoolConstants.ANONYMOUS);
-    contact.setCreatedAt(LocalDateTime.now());
     Contact savedContact = contactRepository.save(contact);
     if (null != savedContact && savedContact.getContactId() > 0) {
       isSaved = true;
@@ -49,17 +46,14 @@ public class ContactService {
   }
 
   public boolean updateMsgStatus(
-      Long contactId,
-      String updatedBy
+      Long contactId
   ) {
     boolean isUpdated = false;
     Optional<Contact> contact = contactRepository.findById(contactId);
-    contact.ifPresent(contact1 ->
-      {
-        contact1.setStatus(EazySchoolConstants.CLOSE);
-        contact1.setUpdatedBy(updatedBy);
-        contact1.setUpdatedAt(LocalDateTime.now());
-      });
+
+    contact
+        .ifPresent(contact1 -> contact1.setStatus(EazySchoolConstants.CLOSE));
+        
     Contact updatedContact = contactRepository.save(contact.get());
     if (null != updatedContact && updatedContact.getUpdatedBy() != null) {
       isUpdated = true;
