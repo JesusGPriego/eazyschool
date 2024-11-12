@@ -1,12 +1,26 @@
 package com.suleware.eazyschool.example_18.model;
 
-import lombok.Data;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-public class Holiday {
+@Getter
+@Setter
+@Entity
+@Table(name = "holidays")
+public class Holiday extends Base {
+  @Id
   private String day;
   private String reason;
+  @Enumerated(EnumType.STRING)
   private Type type;
+
+  public Holiday() {
+  }
 
   public Holiday(
       String day,

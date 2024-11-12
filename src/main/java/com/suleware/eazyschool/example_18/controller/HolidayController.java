@@ -1,6 +1,5 @@
 package com.suleware.eazyschool.example_18.controller;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -12,9 +11,18 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.suleware.eazyschool.example_18.model.Holiday;
+import com.suleware.eazyschool.example_18.service.HolidayService;
 
 @Controller
 public class HolidayController {
+
+  private HolidayService holidayService;
+
+  public HolidayController(
+      HolidayService holidayService
+  ) {
+    this.holidayService = holidayService;
+  }
 
   private String displayHolidays(
       @RequestParam(required = false)
@@ -26,20 +34,7 @@ public class HolidayController {
 
     model.addAttribute("festival", festival.orElse(false));
     model.addAttribute("federal", federal.orElse(false));
-    List<Holiday> holidays = Arrays.asList(
-        new Holiday(" Jan 1 ", "New Year's Day", Holiday.Type.FESTIVAL),
-        new Holiday(" Oct 31 ", "Halloween", Holiday.Type.FESTIVAL),
-        new Holiday(" Nov 24 ", "Thanksgiving Day", Holiday.Type.FESTIVAL),
-        new Holiday(" Dec 25 ", "Christmas", Holiday.Type.FESTIVAL),
-        new Holiday(
-            " Jan 17 ",
-            "Martin Luther King Jr. Day",
-            Holiday.Type.FEDERAL
-        ),
-        new Holiday(" July 4 ", "Independence Day", Holiday.Type.FEDERAL),
-        new Holiday(" Sep 5 ", "Labor Day", Holiday.Type.FEDERAL),
-        new Holiday(" Nov 11 ", "Veterans Day", Holiday.Type.FEDERAL)
-    );
+    List<Holiday> holidays = holidayService.getHolidays();
     Holiday.Type[] types = Holiday.Type.values();
     for (Holiday.Type type : types) {
       model.addAttribute(

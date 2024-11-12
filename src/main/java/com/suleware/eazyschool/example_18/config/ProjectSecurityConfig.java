@@ -6,6 +6,8 @@ import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
@@ -13,19 +15,23 @@ import org.springframework.security.web.SecurityFilterChain;
 public class ProjectSecurityConfig {
 
   @Bean
-  SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+  SecurityFilterChain securityFilterChain(
+      HttpSecurity http
+  ) throws Exception {
 
     http.csrf(csrf -> csrf.ignoringRequestMatchers("/saveMsg"))
         .authorizeHttpRequests(
             authRequests -> authRequests.requestMatchers("/dashboard")
                 .authenticated()
-                .requestMatchers("/",
+                .requestMatchers(
+                    "/",
                     "/home",
                     "/holidays/**",
                     "/contact",
                     "/saveMsg",
                     "/courses",
-                    "/about")
+                    "/about"
+                )
                 .permitAll()
                 .requestMatchers("assets/**")
                 .permitAll()
@@ -34,36 +40,47 @@ public class ProjectSecurityConfig {
                 .requestMatchers("/logout")
                 .permitAll()
                 .anyRequest()
-                .authenticated())
+                .authenticated()
+        )
         .formLogin(
             formLoginConfigurer -> formLoginConfigurer.loginPage("/login")
                 .defaultSuccessUrl("/dashboard")
                 .failureUrl("/login?error=true")
-                .permitAll())
-        .logout(logoutConfigurer -> logoutConfigurer
-            .logoutSuccessUrl("/login?logout=true")
-            .invalidateHttpSession(true)
-            .permitAll())
+                .permitAll()
+        )
+        .logout(
+            logoutConfigurer -> logoutConfigurer
+                .logoutSuccessUrl("/login?logout=true")
+                .invalidateHttpSession(true)
+                .permitAll()
+        )
         .httpBasic(Customizer.withDefaults());
 
     return http.build();
   }
 
   @Bean
-  InMemoryUserDetailsManager userDetailsService() {
+  public InMemoryUserDetailsManager userDetailsManagerService() {
 
-    UserDetails admin = User.withDefaultPasswordEncoder()
-        .username("admin")
-        .password("12345")
-        .roles("ADMIN", "ADMIN")
-        .build();
-    UserDetails user = User.withDefaultPasswordEncoder()
+    UserDetails user = User.builder()
         .username("user")
-        .password("12345")
+        .password(passwordEncoder().encode("123456"))
         .roles("USER")
         .build();
 
+    UserDetails admin = User.builder()
+        .username("admin")
+        .password(passwordEncoder().encode("12345"))
+        .roles("USER", "ADMIN")
+        .build();
+
     return new InMemoryUserDetailsManager(user, admin);
+  }
+
+  @Bean
+  protected PasswordEncoder passwordEncoder() {
+
+    return new BCryptPasswordEncoder();
   }
 
 }
