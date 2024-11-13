@@ -17,7 +17,7 @@ import lombok.Setter;
 @Setter
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-public class Base {
+public class BaseEntity {
   @CreatedBy
   private String createdBy;
   @CreatedDate

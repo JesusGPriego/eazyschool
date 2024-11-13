@@ -19,7 +19,7 @@ public class ProjectSecurityConfig {
       HttpSecurity http
   ) throws Exception {
 
-    http.csrf(csrf -> csrf.ignoringRequestMatchers("/saveMsg"))
+    http.csrf(csrf -> csrf.ignoringRequestMatchers("/saveMsg", "/public/**"))
         .authorizeHttpRequests(
             authRequests -> authRequests.requestMatchers("/dashboard")
                 .authenticated()
@@ -38,6 +38,8 @@ public class ProjectSecurityConfig {
                 .requestMatchers("/login")
                 .permitAll()
                 .requestMatchers("/logout")
+                .permitAll()
+                .requestMatchers("/public/**")
                 .permitAll()
                 .anyRequest()
                 .authenticated()

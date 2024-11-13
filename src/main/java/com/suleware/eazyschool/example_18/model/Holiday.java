@@ -12,7 +12,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "holidays")
-public class Holiday extends Base {
+public class Holiday extends BaseEntity {
   @Id
   private String day;
   private String reason;
