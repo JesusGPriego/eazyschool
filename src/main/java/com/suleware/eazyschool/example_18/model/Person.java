@@ -3,10 +3,14 @@ package com.suleware.eazyschool.example_18.model;
 import com.suleware.eazyschool.example_18.annotation.FieldsValueMatch;
 import com.suleware.eazyschool.example_18.annotation.PasswordValidator;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Transient;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -26,7 +30,7 @@ import lombok.Setter;
         fieldMatch = "confirmEmail",
         message = "Emails does not match")
 })
-public class Person {
+public class Person extends BaseEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
@@ -58,4 +62,20 @@ public class Person {
       message = "Confirm Password must be at least 5 characters long")
   @Transient
   private String confirmPwd;
+
+  @OneToOne(fetch = FetchType.EAGER,
+      cascade = CascadeType.ALL,
+      targetEntity = Address.class)
+  @JoinColumn(name = "address_id",
+      referencedColumnName = "addressId",
+      nullable = true)
+  private Address address;
+
+  @OneToOne(fetch = FetchType.EAGER,
+      cascade = CascadeType.PERSIST,
+      targetEntity = Roles.class)
+  @JoinColumn(name = "role_id",
+      referencedColumnName = "roleId",
+      nullable = false)
+  private Roles role;
 }

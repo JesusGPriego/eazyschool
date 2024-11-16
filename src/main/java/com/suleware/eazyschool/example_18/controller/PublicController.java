@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.suleware.eazyschool.example_18.model.Person;
+import com.suleware.eazyschool.example_18.service.PersonService;
 
 import jakarta.validation.Valid;
 
@@ -17,25 +18,34 @@ import jakarta.validation.Valid;
 @RequestMapping("/public")
 public class PublicController {
 
-  @GetMapping(value = "/register")
-  public String displayRegisterPage(
+  private PersonService personService;
+
+  public PublicController(
+      PersonService personServie
+  ) {
+    this.personService = personServie;
+  }
+
+  @GetMapping(value = "/register") public String displayRegisterPage(
       Model model
   ) {
     model.addAttribute("person", new Person());
     return "register.html";
   }
 
-  @PostMapping(value = "/createUser")
-  public String saveUser(
-      @Valid
-      @ModelAttribute
-      Person person,
+  @PostMapping("/createUser") public String saveUser(
+      @Valid @ModelAttribute Person person,
       Errors errors
   ) {
     if (errors.hasErrors()) {
       return "register.html";
     }
-    return "redirect:/login";
+    boolean isSaved = personService.createNewPerson(person);
+    if (isSaved) {
+      return "redirect:/login?register=true";
+    } else {
+      return "register.html";
+    }
   }
 
 }
