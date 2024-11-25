@@ -13,3 +13,7 @@ spring:
     properties:
       hibernate:
         format-sql: true
+      javax:
+        persistence:
+          validation:
+            mode: none

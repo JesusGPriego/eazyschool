@@ -7,5 +7,7 @@ import com.suleware.eazyschool.example_18.model.Person;
 
 @Repository
 public interface PersonRepository extends CrudRepository<Person, Long> {
-  
+  Person findByEmail(
+      String email
+  );
 }

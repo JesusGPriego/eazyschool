@@ -1,5 +1,7 @@
 package com.suleware.eazyschool.example_18.model;
 
+import java.io.Serializable;
+
 import com.suleware.eazyschool.example_18.annotation.FieldsValueMatch;
 import com.suleware.eazyschool.example_18.annotation.PasswordValidator;
 
@@ -31,9 +33,10 @@ import lombok.Setter;
         message = "Emails does not match")
 })
 public class Person extends BaseEntity {
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+  private Long personId;
   @NotBlank(message = "Name must not be blank")
   @Size(min = 3, message = "Name must be at least 3 characters long")
   private String name;
@@ -77,5 +80,8 @@ public class Person extends BaseEntity {
   @JoinColumn(name = "role_id",
       referencedColumnName = "roleId",
       nullable = false)
-  private Roles role;
+  private Roles roles;
+
+
+
 }
