@@ -13,7 +13,7 @@ spring:
     properties:
       hibernate:
         format-sql: true
-      javax:
+      jakarta:
         persistence:
           validation:
             mode: none

@@ -1,6 +1,10 @@
 package com.suleware.eazyschool.example_18.model;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
+
+import org.springframework.security.access.method.P;
 
 import com.suleware.eazyschool.example_18.annotation.FieldsValueMatch;
 import com.suleware.eazyschool.example_18.annotation.PasswordValidator;
@@ -12,6 +16,9 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Transient;
 import jakarta.validation.constraints.Email;
@@ -37,6 +44,7 @@ public class Person extends BaseEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long personId;
+  
   @NotBlank(message = "Name must not be blank")
   @Size(min = 3, message = "Name must be at least 3 characters long")
   private String name;
@@ -82,6 +90,21 @@ public class Person extends BaseEntity {
       nullable = false)
   private Roles roles;
 
+  @ManyToOne(fetch = FetchType.LAZY, optional = true)
+  @JoinColumn(name = "class_id",
+      referencedColumnName = "classId",
+      nullable = true)
+  private EazyClass eazyClass;
 
+  @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+  @JoinTable(name = "person_courses", joinColumns = {
+      @JoinColumn(name = "person_id", referencedColumnName = "personId")
+  }, inverseJoinColumns = {
+      @JoinColumn(name = "course_id", referencedColumnName = "courseId")
+  })
+  private Set<Course> courses;
 
+  public Person() {
+    this.courses = new HashSet<>();
+  }
 }

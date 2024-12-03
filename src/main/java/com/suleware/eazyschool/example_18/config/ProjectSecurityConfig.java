@@ -11,29 +11,42 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 public class ProjectSecurityConfig {
 
+  private static final String ADMIN_ROLE = "ADMIN";
+
   @Bean
   SecurityFilterChain securityFilterChain(
       HttpSecurity http
   ) throws Exception {
 
-    http.csrf(csrf -> csrf.ignoringRequestMatchers("/saveMsg", "/public/**"))
+    http.csrf(
+        csrf -> csrf.ignoringRequestMatchers("/saveMsg")
+            .ignoringRequestMatchers("/public/**")
+    )
         .authorizeHttpRequests(
-            authRequests -> authRequests.requestMatchers("/dashboard")
+            requests -> requests.requestMatchers("/dashboard")
                 .authenticated()
-                .requestMatchers(
-                    "/",
-                    "/home",
-                    "/holidays/**",
-                    "/contact",
-                    "/saveMsg",
-                    "/courses",
-                    "/about"
-                )
-                .permitAll()
+                .requestMatchers("/displayMessages")
+                .hasRole(ADMIN_ROLE)
+                .requestMatchers("/closeMsg/**")
+                .hasRole(ADMIN_ROLE)
+                .requestMatchers("/admin/**")
+                .hasRole(ADMIN_ROLE)
                 .requestMatchers("/displayProfile")
                 .authenticated()
                 .requestMatchers("/updateProfile")
                 .authenticated()
+                .requestMatchers("/", "/home")
+                .permitAll()
+                .requestMatchers("/holidays/**")
+                .permitAll()
+                .requestMatchers("/contact")
+                .permitAll()
+                .requestMatchers("/saveMsg")
+                .permitAll()
+                .requestMatchers("/courses")
+                .permitAll()
+                .requestMatchers("/about")
+                .permitAll()
                 .requestMatchers("/assets/**")
                 .permitAll()
                 .requestMatchers("/login")
@@ -42,11 +55,9 @@ public class ProjectSecurityConfig {
                 .permitAll()
                 .requestMatchers("/public/**")
                 .permitAll()
-                .anyRequest()
-                .authenticated()
         )
         .formLogin(
-            formLoginConfigurer -> formLoginConfigurer.loginPage("/login")
+            loginConfigurer -> loginConfigurer.loginPage("/login")
                 .defaultSuccessUrl("/dashboard")
                 .failureUrl("/login?error=true")
                 .permitAll()

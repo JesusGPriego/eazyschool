@@ -25,13 +25,16 @@ public class DashboardController {
   public String displayDashboard(
       Model model,
       Authentication authentication,
-      HttpSession httpSession
+      HttpSession session
   ) {
-    String name = authentication.getName();
-    Person p = personRepository.findByEmail(name);
-    model.addAttribute("username", p.getEmail());
+    Person person = personRepository.findByEmail(authentication.getName());
+    model.addAttribute("username", person.getName());
     model.addAttribute("roles", authentication.getAuthorities().toString());
-    httpSession.setAttribute("loggedInPerson", p);
+    if (null != person.getEazyClass()
+        && null != person.getEazyClass().getName()) {
+      model.addAttribute("enrolledClass", person.getEazyClass().getName());
+    }
+    session.setAttribute("loggedInPerson", person);
     return "dashboard.html";
   }
 }
