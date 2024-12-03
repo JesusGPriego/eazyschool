@@ -3,6 +3,7 @@ package com.suleware.eazyschool.example_18.controller;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -153,7 +154,10 @@ public class AdminController {
   public ModelAndView displayCourses(
       Model model
   ) {
-    List<Course> courses = courseRepository.findAll();
+
+    // List<Course> courses = courseRepository.findByOrderByNameDesc();
+    List<Course> courses =
+        courseRepository.findAll(Sort.by("name").ascending());
     ModelAndView modelAndView = new ModelAndView("courses_secure.html");
     modelAndView.addObject("courses", courses);
     modelAndView.addObject("course", new Course());
