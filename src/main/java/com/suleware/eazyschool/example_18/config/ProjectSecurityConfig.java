@@ -21,6 +21,7 @@ public class ProjectSecurityConfig {
     http.csrf(
         csrf -> csrf.ignoringRequestMatchers("/saveMsg")
             .ignoringRequestMatchers("/public/**")
+            .ignoringRequestMatchers("/api/**")
     )
         .authorizeHttpRequests(
             requests -> requests.requestMatchers("/dashboard")
@@ -31,6 +32,8 @@ public class ProjectSecurityConfig {
                 .hasRole(ADMIN_ROLE)
                 .requestMatchers("/admin/**")
                 .hasRole(ADMIN_ROLE)
+                .requestMatchers("/api/**")
+                .authenticated()
                 .requestMatchers("/displayProfile")
                 .authenticated()
                 .requestMatchers("/updateProfile")
