@@ -17,3 +17,6 @@ spring:
         persistence:
           validation:
             mode: none
+  data:
+    rest:
+      base-path: /data-api
