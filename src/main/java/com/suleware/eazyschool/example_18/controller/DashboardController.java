@@ -9,8 +9,10 @@ import com.suleware.eazyschool.example_18.model.Person;
 import com.suleware.eazyschool.example_18.repository.PersonRepository;
 
 import jakarta.servlet.http.HttpSession;
+import lombok.extern.slf4j.Slf4j;
 
 @Controller
+@Slf4j
 public class DashboardController {
 
   PersonRepository personRepository;
@@ -34,7 +36,16 @@ public class DashboardController {
         && null != person.getEazyClass().getName()) {
       model.addAttribute("enrolledClass", person.getEazyClass().getName());
     }
+    logMessages();
     session.setAttribute("loggedInPerson", person);
     return "dashboard.html";
+  }
+
+  private void logMessages() {
+    log.error("Error message from the Dashboard page");
+    log.warn("Warning message from the Dashboard page");
+    log.info("Info message from the Dashboard page");
+    log.debug("Debug message from the Dashboard page");
+    log.trace("Trace message from the Dashboard page");
   }
 }

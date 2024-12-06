@@ -20,3 +20,21 @@ spring:
   data:
     rest:
       base-path: /data-api
+logging:
+  level:
+    root: INFO
+    com:
+      suleware:
+        eazyschool:
+          example_18:
+            aspects: ERROR
+  file:
+    name: file.log
+  logback:
+    rollingpolicy:
+      file-name-pattern: demofile.%d{yyyy-MM-dd}.%i.gz.log
+      max-file-size:
+        10MB
+      total-size-cap:
+        1GB
+      clean-history-on-start: true
