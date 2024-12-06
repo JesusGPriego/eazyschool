@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-@Controller
+@Controller("profileControllerBean")
 public class ProfileController {
 
   private PersonRepository personRepository;
