@@ -3,7 +3,10 @@ server:
 
 spring:
   config:
-    import: classpath:env.yml, application.config.yml
+    import: classpath:env.yml, application.config.yml, application-uat.yml, application-prod.yml
+  profiles:
+    active:
+    - uat
   application:
     name: springboot-jpa
   datasource: 

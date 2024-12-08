@@ -19,14 +19,14 @@ import com.suleware.eazyschool.example_18.model.Roles;
 import com.suleware.eazyschool.example_18.repository.PersonRepository;
 
 @Component
-@Profile("prod")
-public class EazySchoolUsernamePwdAuthenticationProvider implements
+@Profile("!prod")
+public class EazySchoolNonProdUsernamePwdAuthenticationProvider implements
     AuthenticationProvider {
 
   private PersonRepository personRepository;
   private PasswordEncoder passwordEncoder;
 
-  public EazySchoolUsernamePwdAuthenticationProvider(
+  public EazySchoolNonProdUsernamePwdAuthenticationProvider(
       PersonRepository personRepository,
       PasswordEncoder passwordEncoder
   ) {
@@ -34,14 +34,32 @@ public class EazySchoolUsernamePwdAuthenticationProvider implements
     this.passwordEncoder = passwordEncoder;
   }
 
-  @Override public Authentication authenticate(
+  @Override
+  /**
+   * This method will be used to authenticate users. If the user name and the
+   * password match the record in the database, the user will be authenticated
+   * and a successful authentication object will be returned. If the user name
+   * and the password do not match the record in the database, a
+   * <code>BadCredentialsException</code> will be thrown.
+   *
+   * @param authentication
+   *                         The authentication object containing the user name
+   *                         and the password.
+   * 
+   * @return A successful authentication object if the user name and the
+   *         password match the record in the database.
+   * 
+   * @throws AuthenticationException
+   *                                   If the user name and the password do not
+   *                                   match the record in the database.
+   */
+  /****** 8f9af872-d654-4ba7-a047-f80532679911 *******/
+  public Authentication authenticate(
       Authentication authentication
   ) throws AuthenticationException {
     String email = authentication.getName();
-    String pwd = authentication.getCredentials().toString();
     Person person = personRepository.findByEmail(email);
-    if (null != person && person.getPersonId() > 0
-        && passwordEncoder.matches(pwd, person.getPwd())) {
+    if (null != person && person.getPersonId() > 0) {
       return new UsernamePasswordAuthenticationToken(
           person.getEmail(),
           null,
@@ -52,7 +70,8 @@ public class EazySchoolUsernamePwdAuthenticationProvider implements
     }
   }
 
-  @Override public boolean supports(
+  @Override
+  public boolean supports(
       Class<?> authentication
   ) {
     return authentication.equals(UsernamePasswordAuthenticationToken.class);

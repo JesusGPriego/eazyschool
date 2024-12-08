@@ -1,0 +1,20 @@
+spring:
+  config:
+    activate:
+      on-profile: uat
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format-sql: true
+logging:
+  level:
+    root: WARN
+    com:
+      suleware:
+        eazyschool:
+          example_18:
+            aspects: WARN
+eazyschool:
+  contact:
+    page-size: 2

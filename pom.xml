@@ -12,6 +12,7 @@
 	<artifactId>example_18</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>example_18</name>
+	<packaging>jar</packaging>
 	<description>School management application</description>
 	<url/>
 	<licenses>

@@ -867,3 +867,8 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 2024-12-08T14:50:53.427+01:00  INFO 29032 --- [springboot-jpa] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-12-08T14:50:53.434+01:00  INFO 29032 --- [springboot-jpa] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-12-08T14:50:53.457+01:00  INFO 29032 --- [springboot-jpa] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-08T15:39:50.190+01:00 ERROR 72825 --- [springboot-jpa] [http-nio-8081-exec-5] c.s.e.e.controller.DashboardController   : Error message from the Dashboard page
+2024-12-08T17:48:01.418+01:00  WARN 96850 --- [springboot-jpa] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08T17:48:19.321+01:00 ERROR 96850 --- [springboot-jpa] [http-nio-8081-exec-1] c.s.e.e.controller.DashboardController   : Error message from the Dashboard page
+2024-12-08T17:48:19.322+01:00  WARN 96850 --- [springboot-jpa] [http-nio-8081-exec-1] c.s.e.e.controller.DashboardController   : Warning message from the Dashboard page
+2024-12-08T17:51:17.663+01:00  WARN 99944 --- [springboot-jpa] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning

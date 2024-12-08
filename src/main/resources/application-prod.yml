@@ -1,0 +1,20 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        format-sql: false
+logging:
+  level:
+    root: ERROR
+    com:
+      suleware:
+        eazyschool:
+          example_18:
+            aspects: ERROR
+eazyschool:
+  contact:
+    page-size: 7 
