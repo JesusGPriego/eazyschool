@@ -1,0 +1,10 @@
+eazyschool:
+  pageSize: 10
+  contact:
+    pageSize: 5
+    successMsg: Your message is submitted succesfully.
+  branches:
+    - NewYork
+    - Delhi
+    - Paris
+    - Singapore

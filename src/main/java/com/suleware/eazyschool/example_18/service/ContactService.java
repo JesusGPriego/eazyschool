@@ -9,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import com.suleware.eazyschool.example_18.config.EazySchoolProps;
 import com.suleware.eazyschool.example_18.constants.EazySchoolConstants;
 import com.suleware.eazyschool.example_18.model.Contact;
 import com.suleware.eazyschool.example_18.repository.ContactRepository;
@@ -19,11 +20,14 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 public class ContactService {
   private ContactRepository contactRepository;
+  private EazySchoolProps props;
 
   public ContactService(
-      ContactRepository contactRepository
+      ContactRepository contactRepository,
+      EazySchoolProps props
   ) {
     this.contactRepository = contactRepository;
+    this.props = props;
   }
 
   /**
@@ -50,14 +54,19 @@ public class ContactService {
       String sortField,
       String sortDir
   ) {
-    int pageSize = 5;
+    int pageSize = props.getPageSize();
+    if (null != props.getContact()
+        && null != props.getContact().get("pageSize")) {
+      pageSize = Integer.parseInt(props.getContact().get("pageSize").trim());
+    }
     Pageable pageable = PageRequest.of(
         pageNum - 1,
         pageSize,
         sortDir.equals("asc") ? Sort.by(sortField).ascending()
             : Sort.by(sortField).descending()
     );
-    return contactRepository.findByStatusWithQuery(EazySchoolConstants.OPEN, pageable);
+    return contactRepository
+        .findByStatusWithQuery(EazySchoolConstants.OPEN, pageable);
   }
 
   public boolean updateMsgStatus(

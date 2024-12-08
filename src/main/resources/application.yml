@@ -3,7 +3,7 @@ server:
 
 spring:
   config:
-    import: classpath:env.yml
+    import: classpath:env.yml, application.config.yml
   application:
     name: springboot-jpa
   datasource: 

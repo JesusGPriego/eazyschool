@@ -1,5 +1,7 @@
 package com.suleware.eazyschool.example_18.controller;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,10 +19,20 @@ public class DashboardController {
 
   PersonRepository personRepository;
 
+  @Value("${eazyschool.pageSize}")
+  private int defaultPageSize;
+
+  @Value("${eazyschool.contact.successMsg}")
+  private String successMsg;
+
+  private Environment environment;
+
   public DashboardController(
-      PersonRepository personRepository
+      PersonRepository personRepository,
+      Environment environment
   ) {
     this.personRepository = personRepository;
+    this.environment = environment;
   }
 
   @RequestMapping("/dashboard")
@@ -47,5 +59,23 @@ public class DashboardController {
     log.info("Info message from the Dashboard page");
     log.debug("Debug message from the Dashboard page");
     log.trace("Trace message from the Dashboard page");
+
+    log.info(
+        "defaultPageSize value with @Value annotation is : " + defaultPageSize
+    );
+    log.info("successMsg value with @Value annotation is : " + successMsg);
+
+    log.info(
+        "defaultPageSize value with Environment is : "
+            + environment.getProperty("eazyschool.pageSize")
+    );
+    log.info(
+        "successMsg value with Environment is : "
+            + environment.getProperty("eazyschool.contact.successMsg")
+    );
+    log.info(
+        "Java Home environment variable using Environment is : "
+            + environment.getProperty("JAVA_HOME")
+    );
   }
 }

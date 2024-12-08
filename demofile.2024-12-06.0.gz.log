@@ -1,0 +1,54 @@
+2024-12-06T13:23:37.557+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : Starting EazySchoolApplication using Java 21.0.5 with PID 120913 (/home/suleware/Documents/learning/eazybytes/springboot/example_18/target/classes started by suleware in /home/suleware/Documents/learning/eazybytes/springboot/example_18)
+2024-12-06T13:23:37.560+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-06T13:23:37.622+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-06T13:23:37.623+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-06T13:23:38.496+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-06T13:23:38.579+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 6 JPA repository interfaces.
+2024-12-06T13:23:39.578+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-12-06T13:23:39.589+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-06T13:23:39.590+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-06T13:23:39.628+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-06T13:23:39.628+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2004 ms
+2024-12-06T13:23:39.820+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-06T13:23:40.139+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18cbdec9
+2024-12-06T13:23:40.140+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-06T13:23:40.191+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-06T13:23:40.242+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-06T13:23:40.277+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-06T13:23:40.501+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-06T13:23:40.595+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.0.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-06T13:23:41.470+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-06T13:23:41.473+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-06T13:23:42.083+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-06T13:23:42.815+01:00  WARN 120913 --- [springboot-jpa] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-06T13:23:43.031+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name eazySchoolUsernamePwdAuthenticationProvider
+2024-12-06T13:23:44.298+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-06T13:23:44.336+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-12-06T13:23:44.345+01:00  INFO 120913 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : Started EazySchoolApplication in 7.241 seconds (process running for 7.853)
+2024-12-06T13:24:26.257+01:00  INFO 120913 --- [springboot-jpa] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-06T13:24:26.257+01:00  INFO 120913 --- [springboot-jpa] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-06T13:24:26.259+01:00  INFO 120913 --- [springboot-jpa] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-06T13:24:31.723+01:00 ERROR 120913 --- [springboot-jpa] [http-nio-8081-exec-7] c.s.e.e.controller.DashboardController   : Error message from the Dashboard page
+2024-12-06T13:24:31.723+01:00  WARN 120913 --- [springboot-jpa] [http-nio-8081-exec-7] c.s.e.e.controller.DashboardController   : Warning message from the Dashboard page
+2024-12-06T13:24:31.723+01:00  INFO 120913 --- [springboot-jpa] [http-nio-8081-exec-7] c.s.e.e.controller.DashboardController   : Info message from the Dashboard page
+2024-12-06T13:24:37.952+01:00 ERROR 120913 --- [springboot-jpa] [http-nio-8081-exec-2] c.s.e.e.controller.DashboardController   : Error message from the Dashboard page
+2024-12-06T13:24:37.953+01:00  WARN 120913 --- [springboot-jpa] [http-nio-8081-exec-2] c.s.e.e.controller.DashboardController   : Warning message from the Dashboard page
+2024-12-06T13:24:37.953+01:00  INFO 120913 --- [springboot-jpa] [http-nio-8081-exec-2] c.s.e.e.controller.DashboardController   : Info message from the Dashboard page
+2024-12-06T13:24:41.792+01:00 ERROR 120913 --- [springboot-jpa] [http-nio-8081-exec-1] c.s.e.e.controller.DashboardController   : Error message from the Dashboard page
+2024-12-06T13:24:41.792+01:00  WARN 120913 --- [springboot-jpa] [http-nio-8081-exec-1] c.s.e.e.controller.DashboardController   : Warning message from the Dashboard page
+2024-12-06T13:24:41.792+01:00  INFO 120913 --- [springboot-jpa] [http-nio-8081-exec-1] c.s.e.e.controller.DashboardController   : Info message from the Dashboard page
+2024-12-06T13:25:00.272+01:00 ERROR 120913 --- [springboot-jpa] [http-nio-8081-exec-7] c.s.e.e.controller.DashboardController   : Error message from the Dashboard page
+2024-12-06T13:25:00.272+01:00  WARN 120913 --- [springboot-jpa] [http-nio-8081-exec-7] c.s.e.e.controller.DashboardController   : Warning message from the Dashboard page
+2024-12-06T13:25:00.272+01:00  INFO 120913 --- [springboot-jpa] [http-nio-8081-exec-7] c.s.e.e.controller.DashboardController   : Info message from the Dashboard page
+2024-12-06T13:25:31.288+01:00  INFO 120913 --- [springboot-jpa] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-06T13:25:31.291+01:00  INFO 120913 --- [springboot-jpa] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-06T13:25:31.297+01:00  INFO 120913 --- [springboot-jpa] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-06T13:25:31.301+01:00  INFO 120913 --- [springboot-jpa] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-06T13:25:31.319+01:00  INFO 120913 --- [springboot-jpa] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
