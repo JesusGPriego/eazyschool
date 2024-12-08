@@ -47,6 +47,13 @@ To run the application with a specific profile, you can use the `-Dspring.profil
 
 These commands will start the application with configuration settings specific to the chosen profile.
 
+## Actuator Endpoints
+
+The following endpoints are available to inspect and interact with the application:
+
+1. eazyschool/actuator - list of all actuator endpoints.
+2. eazyschool/actuator/info: Displays information about the application.
+
 ## Technologies used
 
 * Spring Boot

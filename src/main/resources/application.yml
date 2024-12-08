@@ -6,7 +6,7 @@ spring:
     import: classpath:env.yml, application.config.yml, application-uat.yml, application-prod.yml
   profiles:
     active:
-    - uat
+    - dev
   application:
     name: springboot-jpa
   datasource: 
@@ -41,3 +41,9 @@ logging:
       total-size-cap:
         1GB
       clean-history-on-start: true
+management:
+  endpoints:
+    web:
+      base-path: /eazyschool/actuator
+      exposure:
+        include: "*"

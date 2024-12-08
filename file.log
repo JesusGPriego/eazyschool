@@ -872,3 +872,425 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 2024-12-08T17:48:19.321+01:00 ERROR 96850 --- [springboot-jpa] [http-nio-8081-exec-1] c.s.e.e.controller.DashboardController   : Error message from the Dashboard page
 2024-12-08T17:48:19.322+01:00  WARN 96850 --- [springboot-jpa] [http-nio-8081-exec-1] c.s.e.e.controller.DashboardController   : Warning message from the Dashboard page
 2024-12-08T17:51:17.663+01:00  WARN 99944 --- [springboot-jpa] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08T18:14:13.213+01:00  WARN 118927 --- [springboot-jpa] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08T18:14:24.203+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : Starting EazySchoolApplication using Java 21.0.5 with PID 119595 (/home/suleware/Documents/learning/eazybytes/springboot/example_18/target/classes started by suleware in /home/suleware/Documents/learning/eazybytes/springboot/example_18)
+2024-12-08T18:14:24.209+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : The following 1 profile is active: "dev"
+2024-12-08T18:14:24.354+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-08T18:14:24.355+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-08T18:14:26.895+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08T18:14:27.030+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 120 ms. Found 6 JPA repository interfaces.
+2024-12-08T18:14:29.342+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-12-08T18:14:29.367+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-08T18:14:29.368+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-08T18:14:29.478+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-08T18:14:29.479+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5122 ms
+2024-12-08T18:14:30.401+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-08T18:14:31.153+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6d875640
+2024-12-08T18:14:31.156+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-08T18:14:31.286+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08T18:14:31.389+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-08T18:14:31.450+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-08T18:14:31.963+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-08T18:14:32.129+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.0.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-08T18:14:33.884+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-08T18:14:33.898+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08T18:14:35.552+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-08T18:14:37.161+01:00  WARN 119595 --- [springboot-jpa] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08T18:14:37.763+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name eazySchoolNonProdUsernamePwdAuthenticationProvider
+2024-12-08T18:14:39.406+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-12-08T18:14:41.493+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-08T18:14:41.631+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-12-08T18:14:41.667+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : Started EazySchoolApplication in 18.663 seconds (process running for 20.014)
+2024-12-08T18:14:44.231+01:00  INFO 119595 --- [springboot-jpa] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-08T18:14:44.232+01:00  INFO 119595 --- [springboot-jpa] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-08T18:14:44.236+01:00  INFO 119595 --- [springboot-jpa] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-12-08T18:15:24.690+01:00  INFO 119595 --- [springboot-jpa] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-12-08T18:15:24.723+01:00  INFO 119595 --- [springboot-jpa] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-08T18:15:24.733+01:00  INFO 119595 --- [springboot-jpa] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-08T18:15:24.785+01:00  INFO 119595 --- [springboot-jpa] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08T18:15:24.813+01:00  INFO 119595 --- [springboot-jpa] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-08T18:15:24.967+01:00  INFO 119595 --- [springboot-jpa] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-08T18:15:25.716+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : Starting EazySchoolApplication using Java 21.0.5 with PID 119595 (/home/suleware/Documents/learning/eazybytes/springboot/example_18/target/classes started by suleware in /home/suleware/Documents/learning/eazybytes/springboot/example_18)
+2024-12-08T18:15:25.719+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : The following 1 profile is active: "dev"
+2024-12-08T18:15:26.936+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08T18:15:27.055+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114 ms. Found 6 JPA repository interfaces.
+2024-12-08T18:15:27.822+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-12-08T18:15:27.824+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-08T18:15:27.825+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-08T18:15:27.897+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-08T18:15:27.898+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2162 ms
+2024-12-08T18:15:28.290+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-12-08T18:15:28.373+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2adf6b64
+2024-12-08T18:15:28.374+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-12-08T18:15:28.398+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08T18:15:28.404+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-08T18:15:28.436+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-08T18:15:28.446+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 9.0.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-08T18:15:29.067+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-08T18:15:29.069+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08T18:15:30.490+01:00  WARN 119595 --- [springboot-jpa] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08T18:15:30.863+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name eazySchoolNonProdUsernamePwdAuthenticationProvider
+2024-12-08T18:15:31.736+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-12-08T18:15:33.270+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-08T18:15:33.335+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-12-08T18:15:33.369+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : Started EazySchoolApplication in 7.861 seconds (process running for 71.717)
+2024-12-08T18:15:33.378+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-08T18:15:33.419+01:00  INFO 119595 --- [springboot-jpa] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-08T18:15:33.420+01:00  INFO 119595 --- [springboot-jpa] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-08T18:15:33.427+01:00  INFO 119595 --- [springboot-jpa] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2024-12-08T18:16:18.765+01:00  INFO 119595 --- [springboot-jpa] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-12-08T18:16:18.770+01:00  INFO 119595 --- [springboot-jpa] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-08T18:16:18.774+01:00  INFO 119595 --- [springboot-jpa] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-08T18:16:18.794+01:00  INFO 119595 --- [springboot-jpa] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08T18:16:18.798+01:00  INFO 119595 --- [springboot-jpa] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-12-08T18:16:18.863+01:00  INFO 119595 --- [springboot-jpa] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-12-08T18:16:19.108+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : Starting EazySchoolApplication using Java 21.0.5 with PID 119595 (/home/suleware/Documents/learning/eazybytes/springboot/example_18/target/classes started by suleware in /home/suleware/Documents/learning/eazybytes/springboot/example_18)
+2024-12-08T18:16:19.108+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : The following 1 profile is active: "dev"
+2024-12-08T18:16:19.630+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08T18:16:19.666+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 6 JPA repository interfaces.
+2024-12-08T18:16:20.034+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-12-08T18:16:20.035+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-08T18:16:20.036+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-08T18:16:20.057+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-08T18:16:20.058+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 946 ms
+2024-12-08T18:16:20.361+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-12-08T18:16:20.428+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5935263a
+2024-12-08T18:16:20.429+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-12-08T18:16:20.444+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08T18:16:20.447+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-08T18:16:20.463+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-08T18:16:20.470+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 9.0.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-08T18:16:20.808+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-08T18:16:20.809+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08T18:16:21.695+01:00  WARN 119595 --- [springboot-jpa] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08T18:16:21.962+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name eazySchoolNonProdUsernamePwdAuthenticationProvider
+2024-12-08T18:16:22.552+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-12-08T18:16:23.421+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-08T18:16:23.453+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-12-08T18:16:23.464+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : Started EazySchoolApplication in 4.415 seconds (process running for 121.812)
+2024-12-08T18:16:23.470+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-08T18:17:08.584+01:00  INFO 119595 --- [springboot-jpa] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-12-08T18:17:08.588+01:00  INFO 119595 --- [springboot-jpa] [Thread-11] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-08T18:17:08.592+01:00  INFO 119595 --- [springboot-jpa] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-08T18:17:08.606+01:00  INFO 119595 --- [springboot-jpa] [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08T18:17:08.609+01:00  INFO 119595 --- [springboot-jpa] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-12-08T18:17:08.667+01:00  INFO 119595 --- [springboot-jpa] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-12-08T18:17:08.986+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : Starting EazySchoolApplication using Java 21.0.5 with PID 119595 (/home/suleware/Documents/learning/eazybytes/springboot/example_18/target/classes started by suleware in /home/suleware/Documents/learning/eazybytes/springboot/example_18)
+2024-12-08T18:17:08.987+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : The following 1 profile is active: "dev"
+2024-12-08T18:17:09.110+01:00  WARN 119595 --- [springboot-jpa] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.suleware.eazyschool.example_18.EazySchoolApplication]: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+2024-12-08T18:17:09.115+01:00  INFO 119595 --- [springboot-jpa] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-12-08T18:17:09.149+01:00 ERROR 119595 --- [springboot-jpa] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.suleware.eazyschool.example_18.EazySchoolApplication]: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:613) ~[spring-context-6.2.0.jar:6.2.0]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:836) ~[spring-context-6.2.0.jar:6.2.0]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:833) ~[spring-context-6.2.0.jar:6.2.0]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:803) ~[spring-context-6.2.0.jar:6.2.0]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:189) ~[spring-context-6.2.0.jar:6.2.0]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418) ~[spring-context-6.2.0.jar:6.2.0]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.2.0.jar:6.2.0]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.2.0.jar:6.2.0]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.2.0.jar:6.2.0]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791) ~[spring-context-6.2.0.jar:6.2.0]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609) ~[spring-context-6.2.0.jar:6.2.0]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.0.jar:3.4.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.0.jar:3.4.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.0.jar:3.4.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.0.jar:3.4.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.0.jar:3.4.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.0.jar:3.4.0]
+	at com.suleware.eazyschool.example_18.EazySchoolApplication.main(EazySchoolApplication.java:14) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.0.jar:3.4.0]
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.4.0.jar:3.4.0]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:99) ~[spring-context-6.2.0.jar:6.2.0]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:233) ~[spring-context-6.2.0.jar:6.2.0]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:603) ~[spring-context-6.2.0.jar:6.2.0]
+	... 21 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Value must not be empty
+	at org.springframework.util.Assert.hasText(Assert.java:253) ~[spring-core-6.2.0.jar:6.2.0]
+	at org.springframework.boot.actuate.endpoint.EndpointId.<init>(EndpointId.java:57) ~[spring-boot-actuator-3.4.0.jar:3.4.0]
+	at org.springframework.boot.actuate.endpoint.EndpointId.fromPropertyValue(EndpointId.java:146) ~[spring-boot-actuator-3.4.0.jar:3.4.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter$EndpointPatterns.<init>(IncludeExcludeEndpointFilter.java:165) ~[spring-boot-actuator-autoconfigure-3.4.0.jar:3.4.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.<init>(IncludeExcludeEndpointFilter.java:89) ~[spring-boot-actuator-autoconfigure-3.4.0.jar:3.4.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.<init>(IncludeExcludeEndpointFilter.java:64) ~[spring-boot-actuator-autoconfigure-3.4.0.jar:3.4.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition$StandardExposureOutcomeContributor.<init>(OnAvailableEndpointCondition.java:205) ~[spring-boot-actuator-autoconfigure-3.4.0.jar:3.4.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getExposureOutcomeContributors(OnAvailableEndpointCondition.java:173) ~[spring-boot-actuator-autoconfigure-3.4.0.jar:3.4.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getExposureOutcome(OnAvailableEndpointCondition.java:144) ~[spring-boot-actuator-autoconfigure-3.4.0.jar:3.4.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getMatchOutcome(OnAvailableEndpointCondition.java:121) ~[spring-boot-actuator-autoconfigure-3.4.0.jar:3.4.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getMatchOutcome(OnAvailableEndpointCondition.java:79) ~[spring-boot-actuator-autoconfigure-3.4.0.jar:3.4.0]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.4.0.jar:3.4.0]
+	... 24 common frames omitted
+
+2024-12-08T18:20:13.359+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : Starting EazySchoolApplication using Java 21.0.5 with PID 125775 (/home/suleware/Documents/learning/eazybytes/springboot/example_18/target/classes started by suleware in /home/suleware/Documents/learning/eazybytes/springboot/example_18)
+2024-12-08T18:20:13.375+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : The following 1 profile is active: "dev"
+2024-12-08T18:20:13.867+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-08T18:20:13.872+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-08T18:20:19.638+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08T18:20:20.307+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 614 ms. Found 6 JPA repository interfaces.
+2024-12-08T18:20:26.481+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-12-08T18:20:26.537+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-08T18:20:26.539+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-08T18:20:26.703+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-08T18:20:26.705+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 12831 ms
+2024-12-08T18:20:28.643+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-08T18:20:29.739+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e3b29d6
+2024-12-08T18:20:29.746+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-08T18:20:30.023+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08T18:20:30.210+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-08T18:20:30.336+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-08T18:20:31.313+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-08T18:20:31.587+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.0.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-08T18:20:33.638+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-08T18:20:33.651+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08T18:20:35.637+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-08T18:20:37.349+01:00  WARN 125775 --- [springboot-jpa] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08T18:20:37.997+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name eazySchoolNonProdUsernamePwdAuthenticationProvider
+2024-12-08T18:20:39.953+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/eazyschool/actuator'
+2024-12-08T18:20:42.334+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-08T18:20:42.582+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-12-08T18:20:42.637+01:00  INFO 125775 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : Started EazySchoolApplication in 31.033 seconds (process running for 32.851)
+2024-12-08T18:20:43.432+01:00  INFO 125775 --- [springboot-jpa] [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-08T18:20:43.433+01:00  INFO 125775 --- [springboot-jpa] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-08T18:20:43.438+01:00  INFO 125775 --- [springboot-jpa] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2024-12-08T18:21:10.059+01:00  WARN 125775 --- [springboot-jpa] [http-nio-8081-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource eazyschool/actuator/caches.]
+2024-12-08T18:22:30.914+01:00  INFO 125775 --- [springboot-jpa] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-08T18:22:30.932+01:00  INFO 125775 --- [springboot-jpa] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-08T18:22:31.000+01:00  INFO 125775 --- [springboot-jpa] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08T18:22:31.017+01:00  INFO 125775 --- [springboot-jpa] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-08T18:22:31.085+01:00  INFO 125775 --- [springboot-jpa] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-08T18:24:16.677+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : Starting EazySchoolApplication using Java 21.0.5 with PID 129661 (/home/suleware/Documents/learning/eazybytes/springboot/example_18/target/classes started by suleware in /home/suleware/Documents/learning/eazybytes/springboot/example_18)
+2024-12-08T18:24:16.688+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : The following 1 profile is active: "dev"
+2024-12-08T18:24:16.934+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-08T18:24:16.935+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-08T18:24:20.686+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08T18:24:20.911+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 195 ms. Found 6 JPA repository interfaces.
+2024-12-08T18:24:24.275+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-12-08T18:24:24.296+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-08T18:24:24.297+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-08T18:24:24.367+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-08T18:24:24.368+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7431 ms
+2024-12-08T18:24:24.996+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-08T18:24:25.452+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@510a53ca
+2024-12-08T18:24:25.454+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-08T18:24:25.525+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08T18:24:25.595+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-08T18:24:25.642+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-08T18:24:26.030+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-08T18:24:26.196+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.0.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-08T18:24:27.463+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-08T18:24:27.466+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08T18:24:28.476+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-08T18:24:29.596+01:00  WARN 129661 --- [springboot-jpa] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08T18:24:29.960+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name eazySchoolNonProdUsernamePwdAuthenticationProvider
+2024-12-08T18:24:31.015+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/eazyschool/actuator'
+2024-12-08T18:24:32.412+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-08T18:24:32.504+01:00  INFO 129661 --- [springboot-jpa] [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-08T18:24:32.505+01:00  INFO 129661 --- [springboot-jpa] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-08T18:24:32.509+01:00  INFO 129661 --- [springboot-jpa] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2024-12-08T18:24:32.607+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-12-08T18:24:32.614+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : Started EazySchoolApplication in 17.828 seconds (process running for 20.374)
+2024-12-08T18:24:56.416+01:00  WARN 129661 --- [springboot-jpa] [http-nio-8081-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource eazyschool/actuator/loggers.]
+2024-12-08T18:29:52.251+01:00  INFO 129661 --- [springboot-jpa] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-12-08T18:29:52.255+01:00  INFO 129661 --- [springboot-jpa] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-08T18:29:52.257+01:00  INFO 129661 --- [springboot-jpa] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-08T18:29:52.267+01:00  INFO 129661 --- [springboot-jpa] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08T18:29:52.271+01:00  INFO 129661 --- [springboot-jpa] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-08T18:29:52.307+01:00  INFO 129661 --- [springboot-jpa] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-08T18:29:52.461+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : Starting EazySchoolApplication using Java 21.0.5 with PID 129661 (/home/suleware/Documents/learning/eazybytes/springboot/example_18/target/classes started by suleware in /home/suleware/Documents/learning/eazybytes/springboot/example_18)
+2024-12-08T18:29:52.462+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : The following 1 profile is active: "dev"
+2024-12-08T18:29:53.085+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08T18:29:53.119+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 6 JPA repository interfaces.
+2024-12-08T18:29:53.397+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-12-08T18:29:53.398+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-08T18:29:53.398+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-08T18:29:53.415+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-08T18:29:53.415+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 950 ms
+2024-12-08T18:29:53.645+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-12-08T18:29:53.743+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@60f91888
+2024-12-08T18:29:53.744+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-12-08T18:29:53.761+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08T18:29:53.764+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-08T18:29:53.787+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-08T18:29:53.796+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 9.0.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-08T18:29:54.253+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-08T18:29:54.253+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08T18:29:54.879+01:00  WARN 129661 --- [springboot-jpa] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08T18:29:55.111+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name eazySchoolNonProdUsernamePwdAuthenticationProvider
+2024-12-08T18:29:55.597+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/eazyschool/actuator'
+2024-12-08T18:29:56.333+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-08T18:29:56.372+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-12-08T18:29:56.405+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : Started EazySchoolApplication in 4.02 seconds (process running for 344.165)
+2024-12-08T18:29:56.410+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-08T18:30:14.818+01:00  INFO 129661 --- [springboot-jpa] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-12-08T18:30:14.824+01:00  INFO 129661 --- [springboot-jpa] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-08T18:30:14.831+01:00  INFO 129661 --- [springboot-jpa] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-08T18:30:14.843+01:00  INFO 129661 --- [springboot-jpa] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08T18:30:14.845+01:00  INFO 129661 --- [springboot-jpa] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-12-08T18:30:14.873+01:00  INFO 129661 --- [springboot-jpa] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-12-08T18:30:14.996+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : Starting EazySchoolApplication using Java 21.0.5 with PID 129661 (/home/suleware/Documents/learning/eazybytes/springboot/example_18/target/classes started by suleware in /home/suleware/Documents/learning/eazybytes/springboot/example_18)
+2024-12-08T18:30:14.997+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : The following 1 profile is active: "dev"
+2024-12-08T18:30:15.351+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08T18:30:15.371+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 6 JPA repository interfaces.
+2024-12-08T18:30:15.633+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-12-08T18:30:15.634+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-08T18:30:15.634+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-08T18:30:15.652+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-08T18:30:15.652+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 653 ms
+2024-12-08T18:30:15.849+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-12-08T18:30:15.885+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b816fc3
+2024-12-08T18:30:15.886+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-12-08T18:30:15.895+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08T18:30:15.897+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-08T18:30:15.910+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-08T18:30:15.929+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 9.0.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-08T18:30:16.176+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-08T18:30:16.176+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08T18:30:16.746+01:00  WARN 129661 --- [springboot-jpa] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08T18:30:16.946+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name eazySchoolNonProdUsernamePwdAuthenticationProvider
+2024-12-08T18:30:17.432+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/eazyschool/actuator'
+2024-12-08T18:30:18.034+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-08T18:30:18.066+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-12-08T18:30:18.088+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : Started EazySchoolApplication in 3.144 seconds (process running for 365.848)
+2024-12-08T18:30:18.093+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-08T18:31:42.327+01:00  INFO 129661 --- [springboot-jpa] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-08T18:31:42.328+01:00  INFO 129661 --- [springboot-jpa] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-08T18:31:42.329+01:00  INFO 129661 --- [springboot-jpa] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-08T18:32:07.907+01:00  INFO 129661 --- [springboot-jpa] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-12-08T18:32:07.908+01:00  INFO 129661 --- [springboot-jpa] [Thread-11] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-08T18:32:07.909+01:00  INFO 129661 --- [springboot-jpa] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-08T18:32:07.912+01:00  INFO 129661 --- [springboot-jpa] [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08T18:32:07.913+01:00  INFO 129661 --- [springboot-jpa] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-12-08T18:32:07.922+01:00  INFO 129661 --- [springboot-jpa] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-12-08T18:32:08.015+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : Starting EazySchoolApplication using Java 21.0.5 with PID 129661 (/home/suleware/Documents/learning/eazybytes/springboot/example_18/target/classes started by suleware in /home/suleware/Documents/learning/eazybytes/springboot/example_18)
+2024-12-08T18:32:08.015+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : The following 1 profile is active: "dev"
+2024-12-08T18:32:08.222+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08T18:32:08.233+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 6 JPA repository interfaces.
+2024-12-08T18:32:08.410+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-12-08T18:32:08.410+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-08T18:32:08.411+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-08T18:32:08.421+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-08T18:32:08.421+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 405 ms
+2024-12-08T18:32:08.563+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-12-08T18:32:08.585+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@167fd937
+2024-12-08T18:32:08.585+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-12-08T18:32:08.595+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08T18:32:08.597+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-08T18:32:08.612+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-08T18:32:08.615+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 9.0.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-08T18:32:08.745+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-08T18:32:08.745+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08T18:32:09.169+01:00  WARN 129661 --- [springboot-jpa] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08T18:32:09.298+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name eazySchoolNonProdUsernamePwdAuthenticationProvider
+2024-12-08T18:32:09.568+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/eazyschool/actuator'
+2024-12-08T18:32:09.998+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-08T18:32:10.014+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-12-08T18:32:10.020+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : Started EazySchoolApplication in 2.032 seconds (process running for 477.779)
+2024-12-08T18:32:10.021+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-08T18:32:13.417+01:00  INFO 129661 --- [springboot-jpa] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-12-08T18:32:13.418+01:00  INFO 129661 --- [springboot-jpa] [Thread-15] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-08T18:32:13.419+01:00  INFO 129661 --- [springboot-jpa] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-08T18:32:13.422+01:00  INFO 129661 --- [springboot-jpa] [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08T18:32:13.423+01:00  INFO 129661 --- [springboot-jpa] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2024-12-08T18:32:13.436+01:00  INFO 129661 --- [springboot-jpa] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2024-12-08T18:32:13.605+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : Starting EazySchoolApplication using Java 21.0.5 with PID 129661 (/home/suleware/Documents/learning/eazybytes/springboot/example_18/target/classes started by suleware in /home/suleware/Documents/learning/eazybytes/springboot/example_18)
+2024-12-08T18:32:13.606+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : The following 1 profile is active: "dev"
+2024-12-08T18:32:13.907+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08T18:32:13.927+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 6 JPA repository interfaces.
+2024-12-08T18:32:14.160+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-12-08T18:32:14.161+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-08T18:32:14.161+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-08T18:32:14.170+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-08T18:32:14.170+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 561 ms
+2024-12-08T18:32:14.332+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2024-12-08T18:32:14.351+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b24597a
+2024-12-08T18:32:14.351+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2024-12-08T18:32:14.360+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08T18:32:14.363+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-08T18:32:14.372+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-08T18:32:14.375+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 9.0.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-08T18:32:14.536+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-08T18:32:14.537+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08T18:32:14.976+01:00  WARN 129661 --- [springboot-jpa] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08T18:32:15.073+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name eazySchoolNonProdUsernamePwdAuthenticationProvider
+2024-12-08T18:32:15.340+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/eazyschool/actuator'
+2024-12-08T18:32:15.724+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-08T18:32:15.741+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-12-08T18:32:15.747+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] c.s.e.example_18.EazySchoolApplication   : Started EazySchoolApplication in 2.238 seconds (process running for 483.507)
+2024-12-08T18:32:15.749+01:00  INFO 129661 --- [springboot-jpa] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-08T18:32:17.475+01:00  INFO 129661 --- [springboot-jpa] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-08T18:32:17.475+01:00  INFO 129661 --- [springboot-jpa] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-08T18:32:17.476+01:00  INFO 129661 --- [springboot-jpa] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-08T18:39:15.508+01:00  INFO 129661 --- [springboot-jpa] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-08T18:39:15.510+01:00  INFO 129661 --- [springboot-jpa] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-08T18:39:15.513+01:00  INFO 129661 --- [springboot-jpa] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08T18:39:15.514+01:00  INFO 129661 --- [springboot-jpa] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2024-12-08T18:39:15.537+01:00  INFO 129661 --- [springboot-jpa] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
